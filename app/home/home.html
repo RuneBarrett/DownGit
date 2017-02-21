@@ -12,13 +12,13 @@
 		<input name="repo" type="text" placeholder="GitHub repository" class="form-control" ng-model="repo" ></input>
 	</div>
 	<div class="col-md-6 center-row">
-		<textarea name="paths" type="text" placeholder="Repository Directory or File (one entry by line or '|' separated)" class="form-control" ng-model="paths" ></textarea>
+		<textarea name="paths" type="text" placeholder="Repository Directory or File ('|' separated)" class="form-control" ng-model="paths" ></textarea>
 	</div>
 	<div class="col-md-6 center-row">
 		<input name="filename" type="text" placeholder="File name (blank for auto)" class="form-control" ng-model="filename" ></input>
 	</div>
 	<div class="col-md-6 center-row">
-		<input name="subfolder" type="text" placeholder="Zip file sub folder" class="form-control" ng-model="subfolder" ></input>
+		<input name="subfolder" type="text" placeholder="Zip sub folder (blank for none)" class="form-control" ng-model="subfolder" ></input>
 	</div>
 	<div class="btn-group center-row">
 		<button type="button" class="btn btn-default" ng-click="createDownLink()">Create Download Link</button>
