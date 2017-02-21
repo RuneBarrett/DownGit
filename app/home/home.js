@@ -67,7 +67,7 @@ homeModule.config([
 						ga('send', {
 							hitType: 'event',
 							eventCategory: 'download',
-							eventAction: "repo="+repo.replace("https://github.com/", "")+"&paths="+paths+"&filename="+filename+"&subfolder="+subfolder,
+							eventAction: "repo="+$scope.repo.replace("https://github.com/", "")+"&paths="+$scope.paths+"&filename="+$scope.filename+"&subfolder="+$scope.subfolder,
 							eventLabel: paths
 						});
 						homeService.downloadZippedFiles($scope.repo, $scope.pathArray, progress, options);
