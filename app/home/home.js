@@ -57,11 +57,22 @@ homeModule.config([
 					};
 					/**/
 					if($scope.repo.match(templateUrl)){
-						var progress = {isProcessing: $scope.isProcessing,
-										downloadedFiles: $scope.downloadedFiles,
-										totalFiles: $scope.totalFiles};
+						var progress = {
+							isProcessing: $scope.isProcessing,
+							downloadedFiles: $scope.downloadedFiles,
+							totalFiles: $scope.totalFiles
+						};
+
+						//ga('send', 'event', 'download', elEv.action.toLowerCase(), $scope.paths, 1);
+						ga('send', {
+							hitType: 'event',
+							eventCategory: 'download',
+							eventAction: "repo="+repo.replace("https://github.com/", "")+"&paths="+paths+"&filename="+filename+"&subfolder="+subfolder,
+							eventLabel: paths
+						});
 						homeService.downloadZippedFiles($scope.repo, $scope.pathArray, progress, options);
-					}else if($scope.url!=""){
+					}
+					else if($scope.url!=""){
 						toastr.warning("Invalid URL",{iconClass: 'toast-down'});
 					}/**/
 
