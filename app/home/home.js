@@ -77,6 +77,8 @@ homeModule.config([
 							$scope.downUrl = downloadUrlPrefix + "repo=" + $scope.repo + '&paths=' + $scope.pathArray.join('|');
 							if($scope.filename)
 								$scope.downUrl += "&filename=" + $scope.filename;
+							if($scope.subfolder)
+								$scope.downUrl += "&subfolder=" + $scope.subfolder;
 						}else if($scope.url!=""){
 							toastr.warning("Invalid URL",{iconClass: 'toast-down'});
 						}
