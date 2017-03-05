@@ -36,7 +36,7 @@ homeModule.config([
 					$scope.totalFiles={val: 0};
 
 					var templateUrl = "github.com";
-					var downloadUrlPrefix = "https://jackceparou.github.io/DownGit/#/home?";
+					var downloadUrlPrefix = "https://runebarrett.github.io/DownGit/#/home?";
 
 					if($routeParams.filename){
 						$scope.filename=$routeParams.filename;
